@@ -1,5 +1,5 @@
 import '../style.scss';
-import logo from '../img/notreLogo.png';
+import logo from '../Img/notreLogo.png';
 import { useNavigate } from 'react-router-dom';
 
 export default function Header(){
