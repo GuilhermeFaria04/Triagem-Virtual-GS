@@ -20,13 +20,17 @@ export default function Paciente() {
 
     const navegacao = useNavigate()
 
+    function salvarInfos(){
+        localStorage.setItem('cpf', cpf)
+        navegacao('/triagem')
+    }
 
     return (
         <>
             <main>
                 <Header />
                 <Title text='Dados do Paciente' />
-                <form onSubmit={() => navegacao('/triagem')}>
+                <form onSubmit={salvarInfos}>
                     <div>
                         <input
                             placeholder="Cpf *"

@@ -32,7 +32,8 @@ export default function Cadastro() {
     }
 
     function cadastro(){
-        localStorage.setItem('cep', cep)
+        localStorage.setItem('nome', nome)
+        localStorage.setItem('tel', tel)
         navegacao('/')
     }
     return (

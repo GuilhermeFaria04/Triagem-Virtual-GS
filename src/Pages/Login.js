@@ -9,7 +9,7 @@ export default function Login() {
     const navegacao = useNavigate()
 
     function login(){
-        navegacao('/vistoria')
+        navegacao('/paciente')
     }
     return (
         <div class="auth-container">

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Title from "../Components/Title";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Paciente() {
@@ -11,26 +12,33 @@ export default function Paciente() {
     const [cirurgia, setCirurgia] = useState('')
     const [cigarro, setCigarro] = useState('')
     const [alcool, setAlcool] = useState('')
+    const [unidade, setUnidade] = useState('')
+    const navegacao = useNavigate()
+
+    function submit(){
+        localStorage.setItem('unidade', unidade)
+        navegacao('/confirmacao')
+    }
 
     return (
         <>
             <main>
                 <Header />
                 <Title text='Escolha a unidade' />
-                <form>
+                <form onSubmit={submit}>
                     <div>
-                        <select id="unidade" class="form-select">
+                        <select id="unidade" class="form-select" onChange={e => setUnidade(e.target.value)}>
                             <option value="" disabled selected>Unidade*</option>
-                            <option value="hospital notrecare sorocaba" >Hospital NotreCare Sorocaba, Sorocaba (SP)</option>
-                            <option value="hospital nova vida" >Hospital Nova Vida, Itapevi (SP)</option>
-                            <option value="hospital renascença campinas" >Hospital Renascença Campinas, Campinas (SP)</option>
-                            <option value="hospital santana" >Hospital Santana, Mogi das cruzes (SP)</option>
-                            <option value="hospital são bernardo" >Hospital São Bernardo, São Bernardo do Campo (SP)</option>
-                            <option value="hospital infantil intermédica jacarepaguá" >Hospital Infantil Intermédica Jacarepaguá, Rio de Janeiro (RJ)</option>
-                            <option value="hospital intermédica anália franco" >Hospital Intermédica Anália Franco, São Paulo (SP)</option>
-                            <option value="hospital notrecare rio" >Hospital NotreCare Rio, Rio de Janeiro (RJ)</option>
-                            <option value="hospital family" >Hospital Family, Taboão da Serra (SP)</option>
-                            <option value="hospital frei galvão" >Hospital Frei Galvão, Santos (SP)</option>
+                            <option value="Hospital NotreCare Sorocaba, Sorocaba (SP)" >Hospital NotreCare Sorocaba, Sorocaba (SP)</option>
+                            <option value="Hospital Nova Vida, Itapevi (SP)" >Hospital Nova Vida, Itapevi (SP)</option>
+                            <option value="Hospital Renascença Campinas, Campinas (SP)" >Hospital Renascença Campinas, Campinas (SP)</option>
+                            <option value="Hospital Santana, Mogi das cruzes (SP)" >Hospital Santana, Mogi das cruzes (SP)</option>
+                            <option value="Hospital São Bernardo, São Bernardo do Campo (SP)" >Hospital São Bernardo, São Bernardo do Campo (SP)</option>
+                            <option value="Hospital Infantil Intermédica Jacarepaguá, Rio de Janeiro (RJ)" >Hospital Infantil Intermédica Jacarepaguá, Rio de Janeiro (RJ)</option>
+                            <option value="Hospital Intermédica Anália Franco, São Paulo (SP)" >Hospital Intermédica Anália Franco, São Paulo (SP)</option>
+                            <option value="Hospital NotreCare Rio, Rio de Janeiro (RJ)" >Hospital NotreCare Rio, Rio de Janeiro (RJ)</option>
+                            <option value="Hospital Family, Taboão da Serra (SP)" >Hospital Family, Taboão da Serra (SP)</option>
+                            <option value="Hospital Frei Galvão, Santos (SP)" >Hospital Frei Galvão, Santos (SP)</option>
                         </select>
                     </div>
                     <Title text='Agora é a sua Triagem Virtual' />
