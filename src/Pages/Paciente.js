@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import Title from "../Components/Title";
 import Footer from "../Components/Footer";
+import axios from "axios";
 
 
 
@@ -17,8 +18,18 @@ export default function Paciente() {
     const [doencas, setDoencas] = useState('')
     const [peso, setPeso] = useState('')
     const [telefone, setTelefone] = useState('')
+    const nome = localStorage.getItem('nome')
+    const session = localStorage.getItem('session')
 
     const navegacao = useNavigate()
+
+    useEffect(() => {
+        if(session){
+
+        } else{
+            navegacao('/')
+        }
+    })
 
     function salvarInfos(){
         localStorage.setItem('cpf', cpf)

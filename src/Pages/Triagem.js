@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Title from "../Components/Title";
@@ -13,7 +13,18 @@ export default function Paciente() {
     const [cigarro, setCigarro] = useState('')
     const [alcool, setAlcool] = useState('')
     const [unidade, setUnidade] = useState('')
+    const session = localStorage.getItem('session')
+    
     const navegacao = useNavigate()
+
+
+    useEffect(() => {
+        if(session){
+
+        } else{
+            navegacao('/')
+        }
+    })
 
     function submit(){
         localStorage.setItem('unidade', unidade)

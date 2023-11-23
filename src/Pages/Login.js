@@ -9,6 +9,7 @@ export default function Login() {
     const navegacao = useNavigate()
 
     function login(){
+        localStorage.setItem('session', email)
         navegacao('/paciente')
     }
     return (
