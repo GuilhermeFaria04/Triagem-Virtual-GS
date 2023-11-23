@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 
 
 export default function Paciente() {
@@ -11,6 +12,7 @@ export default function Paciente() {
     const [alcool, setAlcool] = useState('')
 
     return (
+        <>
         <main>
             <Header />
             <h1>Escolha a unidade</h1>
@@ -80,7 +82,9 @@ export default function Paciente() {
                     />
                 </div>
                 <button type="submit">Finalizar Triagem</button>
-            </form>
+            </form>           
         </main>
+        <Footer/>
+        </>
     )
 }

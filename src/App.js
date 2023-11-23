@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './style.scss';
+import './reset.css';
 import Login from './Pages/Login';
 import Cadastro from './Pages/cadastro';
 import Paciente from './Pages/Paciente';
