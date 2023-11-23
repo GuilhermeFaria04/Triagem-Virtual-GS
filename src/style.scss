@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&Oxygen:wght@700&display=swap');
+
+$cor-principal: #EC6E0C;
+$font-principal: 'Roboto', sans-serif;
+$font-header: 'Oxygen', sans-serif;
+
+.auth-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: $font-principal;
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        input{
+            width: 430px;
+            height: 55px;
+            border-radius: 5px;
+            border: 0.5px solid gray;
+            outline: none;
+            padding-left: 5px;
+            font-size: 15px;
+        }
+        button{
+            width: 250px;
+            height: 45px;
+            font-size: 18px;
+            background-color: $cor-principal;
+            border: none;
+            border-radius: 10px;
+            color: #FFF;
+            cursor: pointer;
+            margin-top: 7px;
+        }
+    }
+    img{
+        width: 250px;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+header{
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    img{
+        width: 260px;
+    } 
+    ul{
+        display: flex;
+        gap: 50px;
+        list-style-type: none;
+        align-items: center;
+        font-size: 22px;
+        font-family: $font-header;
+        li{
+            position: relative;
+            cursor: pointer;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 30px;
+                bottom: 0;
+                width: 0%;
+                height: 1.2px;
+                background-color: $cor-principal;
+                transition: 0.2s ease-in-out;
+            }
+            &:hover::before {
+                width: 100%;
+            }          
+        }
+    } 
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    h1{
+        font-family: $font-header;
+        font-size: 45px;
+        color: $cor-principal;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        div{
+            display: flex;
+            gap: 15px;
+        }
+        select{
+            width: 525px;
+            height: 50px;
+            border-radius: 5px;
+            border: 0.5px solid gray;
+            outline: none;
+            padding-left: 5px;
+            font-family: $font-principal;
+            font-size: 17px;
+        }
+        input{
+            width: 430px;
+            height: 55px;
+            border-radius: 5px;
+            border: 0.5px solid gray;
+            outline: none;
+            padding-left: 5px;
+            font-size: 17px;
+            font-family: $font-principal;
+        }
+        button{
+            width: 350px;
+            height: 50px;
+            font-size: 23px;
+            background-color: $cor-principal;
+            border: none;
+            border-radius: 10px;
+            color: #FFF;
+            cursor: pointer;
+            margin-top: 7px;
+            font-family: $font-principal;
+        }
+    }
+}
