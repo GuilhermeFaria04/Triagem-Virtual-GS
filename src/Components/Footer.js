@@ -1,5 +1,4 @@
 import '../style.scss';
-import logo from '../Img/emblemaNotre.png';
 
 
 export default function Footer(){
