@@ -47,6 +47,7 @@ $font-footer: 'Satisfy', cursive;
     }
     p{
         font-size: 20px;
+        margin-top: 10px;
         cursor: pointer;
     }
 }
@@ -64,6 +65,8 @@ header{
     ul{
         display: flex;
         gap: 50px;
+        padding-top: 15px;
+        padding-left: 15px;
         list-style-type: none;
         align-items: center;
         font-size: 22px;
@@ -101,6 +104,7 @@ main{
         font-family: $font-header;
         font-size: 45px;
         color: $cor-principal;
+        margin-bottom: 20px;
     }
     form{
         display: flex;
