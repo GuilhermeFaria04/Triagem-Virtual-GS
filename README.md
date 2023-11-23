@@ -8,4 +8,4 @@ $ cd .\triagem-virtual-gs\
 $ npm install
 
 #running the development server
-$npm start
+$ npm start
